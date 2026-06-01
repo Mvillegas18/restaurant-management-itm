@@ -1,0 +1,22 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.shell-container {
+  flex: 1;
+  background: transparent;
+  height: 100%;
+}
+
+.shell-sidenav {
+  width: 260px;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.shell-content {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 64px);
+}
