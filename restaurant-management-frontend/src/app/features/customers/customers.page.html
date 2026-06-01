@@ -1,41 +1,76 @@
 <div class="page-content">
   <app-page-header
     [title]="'Clientes'"
-    [subtitle]="'Mantén actualizada la base de clientes.'"
+    [subtitle]="'Listado de clientes registrados en la plataforma.'"
     [icon]="'people'"
   >
-    <button mat-flat-button color="primary">Nuevo cliente</button>
-    <button mat-stroked-button>Segmentar</button>
   </app-page-header>
 
-  <div class="page-grid">
-    <mat-card>
-      <mat-card-title>Resumen</mat-card-title>
-      <mat-card-content>
-        <div class="summary-item">
-          <span>Clientes registrados</span>
-          <strong>324</strong>
-        </div>
-        <div class="summary-item">
-          <span>Frecuentes</span>
-          <strong>58</strong>
-        </div>
-        <div class="summary-item">
-          <span>VIP</span>
-          <strong>12</strong>
-        </div>
-      </mat-card-content>
-    </mat-card>
+  <!-- Error Alert -->
+  @if (errorMessage) {
+    <div class="error-container">
+      <mat-icon color="warn">error</mat-icon>
+      <span class="error-text">{{ errorMessage }}</span>
+    </div>
+  }
 
-    <mat-card>
-      <mat-card-title>Segmentos</mat-card-title>
-      <mat-card-content>
-        <mat-chip-set>
-          <mat-chip color="primary" selected>Activos</mat-chip>
-          <mat-chip>Inactivos</mat-chip>
-          <mat-chip>Empresa</mat-chip>
-        </mat-chip-set>
+  <!-- Loading State -->
+  @if (isLoading) {
+    <div class="loading-container">
+      <span>Cargando clientes desde el backend...</span>
+    </div>
+  } @else if (!errorMessage) {
+    <!-- Dynamic Metrics Cards -->
+    <div class="page-grid" style="margin-bottom: 24px;">
+      <mat-card style="max-width: 320px;">
+        <mat-card-content class="metric-card-content">
+          <div class="summary-item">
+            <span>Clientes Registrados</span>
+            <strong>{{ customers.length }}</strong>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <!-- Data Table -->
+    <mat-card style="overflow: hidden;">
+      <mat-card-content style="padding: 0;">
+        <table mat-table [dataSource]="customers" class="mat-elevation-z0">
+          
+          <!-- ID Column -->
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>ID</th>
+            <td mat-cell *matCellDef="let c">#{{ c.id }}</td>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>Nombre</th>
+            <td mat-cell *matCellDef="let c"><strong>{{ c.name }}</strong></td>
+          </ng-container>
+
+          <!-- Email Column -->
+          <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef>Correo Electrónico</th>
+            <td mat-cell *matCellDef="let c">{{ c.email }}</td>
+          </ng-container>
+
+          <!-- Phone Column -->
+          <ng-container matColumnDef="phone">
+            <th mat-header-cell *matHeaderCellDef>Teléfono</th>
+            <td mat-cell *matCellDef="let c">{{ c.phone }}</td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        @if (customers.length === 0) {
+          <div class="empty-state">
+            <span>No se encontraron clientes en la base de datos.</span>
+          </div>
+        }
       </mat-card-content>
     </mat-card>
-  </div>
+  }
 </div>

@@ -22,10 +22,6 @@ export class SidebarComponent {
   readonly navItems: NavItem[] = [
     { label: 'Restaurantes', icon: 'storefront', route: '/restaurants' },
     { label: 'Menú', icon: 'restaurant_menu', route: '/menu-items' },
-    { label: 'Mesas', icon: 'table_bar', route: '/tables' },
-    { label: 'Reservas', icon: 'event', route: '/reservations' },
-    { label: 'Pedidos', icon: 'receipt_long', route: '/orders' },
-    { label: 'Clientes', icon: 'people', route: '/customers' },
-    { label: 'Autenticación', icon: 'lock', route: '/auth' }
+    { label: 'Clientes', icon: 'people', route: '/customers' }
   ];
 }
