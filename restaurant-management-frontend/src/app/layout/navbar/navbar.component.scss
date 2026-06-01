@@ -1,0 +1,16 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--mat-sys-surface);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.title {
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+.spacer {
+  flex: 1;
+}

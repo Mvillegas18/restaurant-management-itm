@@ -1,0 +1,48 @@
+<div class="page-content">
+  <app-page-header
+    [title]="'Mesas'"
+    [subtitle]="'Controla disponibilidad y capacidad por mesa.'"
+    [icon]="'table_bar'"
+  >
+    <button mat-flat-button color="primary">Nueva mesa</button>
+    <button mat-stroked-button>Actualizar estado</button>
+  </app-page-header>
+
+  <div class="page-grid">
+    <mat-card>
+      <mat-card-title>Resumen</mat-card-title>
+      <mat-card-content>
+        <div class="summary-item">
+          <span>Disponibles</span>
+          <strong>18</strong>
+        </div>
+        <div class="summary-item">
+          <span>Ocupadas</span>
+          <strong>7</strong>
+        </div>
+        <div class="summary-item">
+          <span>Reservadas</span>
+          <strong>4</strong>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title>Capacidades</mat-card-title>
+      <mat-card-content>
+        <mat-chip-set>
+          <mat-chip color="primary" selected>2 personas</mat-chip>
+          <mat-chip>4 personas</mat-chip>
+          <mat-chip>6+ personas</mat-chip>
+        </mat-chip-set>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <mat-card>
+    <mat-card-title>Observaciones</mat-card-title>
+    <mat-card-content>
+      <p>Conecta la API para ver el estado en tiempo real de cada mesa.</p>
+    </mat-card-content>
+  </mat-card>
+</div>

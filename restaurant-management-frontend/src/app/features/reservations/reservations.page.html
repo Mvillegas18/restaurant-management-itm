@@ -1,0 +1,48 @@
+<div class="page-content">
+  <app-page-header
+    [title]="'Reservas'"
+    [subtitle]="'Administra reservas, horarios y estados.'"
+    [icon]="'event'"
+  >
+    <button mat-flat-button color="primary">Nueva reserva</button>
+    <button mat-stroked-button>Ver calendario</button>
+  </app-page-header>
+
+  <div class="page-grid">
+    <mat-card>
+      <mat-card-title>Resumen</mat-card-title>
+      <mat-card-content>
+        <div class="summary-item">
+          <span>Reservas hoy</span>
+          <strong>21</strong>
+        </div>
+        <div class="summary-item">
+          <span>Pendientes</span>
+          <strong>6</strong>
+        </div>
+        <div class="summary-item">
+          <span>Confirmadas</span>
+          <strong>14</strong>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title>Estados</mat-card-title>
+      <mat-card-content>
+        <mat-chip-set>
+          <mat-chip color="primary" selected>Pendiente</mat-chip>
+          <mat-chip>Confirmada</mat-chip>
+          <mat-chip>Cancelada</mat-chip>
+        </mat-chip-set>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <mat-card>
+    <mat-card-title>Notas</mat-card-title>
+    <mat-card-content>
+      <p>Conecta la API para mostrar cliente, mesa asignada y notas.</p>
+    </mat-card-content>
+  </mat-card>
+</div>
