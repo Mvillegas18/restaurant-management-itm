@@ -1,0 +1,48 @@
+<div class="page-content">
+  <app-page-header
+    [title]="'Restaurantes'"
+    [subtitle]="'Administra las sedes y datos generales del negocio.'"
+    [icon]="'storefront'"
+  >
+    <button mat-flat-button color="primary">Nuevo restaurante</button>
+    <button mat-stroked-button>Ver métricas</button>
+  </app-page-header>
+
+  <div class="page-grid">
+    <mat-card>
+      <mat-card-title>Resumen</mat-card-title>
+      <mat-card-content>
+        <div class="summary-item">
+          <span>Sedes activas</span>
+          <strong>3</strong>
+        </div>
+        <div class="summary-item">
+          <span>Capacidad total</span>
+          <strong>120</strong>
+        </div>
+        <div class="summary-item">
+          <span>Calificación promedio</span>
+          <strong>4.7</strong>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title>Estados</mat-card-title>
+      <mat-card-content>
+        <mat-chip-set>
+          <mat-chip color="primary" selected>Operando</mat-chip>
+          <mat-chip>Mantenimiento</mat-chip>
+          <mat-chip>Nueva sede</mat-chip>
+        </mat-chip-set>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <mat-card>
+    <mat-card-title>Notas</mat-card-title>
+    <mat-card-content>
+      <p>Conecta la API para mostrar dirección, horarios y contacto de cada sede.</p>
+    </mat-card-content>
+  </mat-card>
+</div>

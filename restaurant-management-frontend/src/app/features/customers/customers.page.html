@@ -1,0 +1,48 @@
+<div class="page-content">
+  <app-page-header
+    [title]="'Clientes'"
+    [subtitle]="'Mantén actualizada la base de clientes.'"
+    [icon]="'people'"
+  >
+    <button mat-flat-button color="primary">Nuevo cliente</button>
+    <button mat-stroked-button>Segmentar</button>
+  </app-page-header>
+
+  <div class="page-grid">
+    <mat-card>
+      <mat-card-title>Resumen</mat-card-title>
+      <mat-card-content>
+        <div class="summary-item">
+          <span>Clientes registrados</span>
+          <strong>324</strong>
+        </div>
+        <div class="summary-item">
+          <span>Frecuentes</span>
+          <strong>58</strong>
+        </div>
+        <div class="summary-item">
+          <span>VIP</span>
+          <strong>12</strong>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title>Segmentos</mat-card-title>
+      <mat-card-content>
+        <mat-chip-set>
+          <mat-chip color="primary" selected>Activos</mat-chip>
+          <mat-chip>Inactivos</mat-chip>
+          <mat-chip>Empresa</mat-chip>
+        </mat-chip-set>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <mat-card>
+    <mat-card-title>Notas</mat-card-title>
+    <mat-card-content>
+      <p>Conecta la API para mostrar historial de reservas y pedidos.</p>
+    </mat-card-content>
+  </mat-card>
+</div>

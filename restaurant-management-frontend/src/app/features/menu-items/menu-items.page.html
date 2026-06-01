@@ -1,0 +1,48 @@
+<div class="page-content">
+  <app-page-header
+    [title]="'Menú'"
+    [subtitle]="'Gestiona platos, categorías y disponibilidad.'"
+    [icon]="'restaurant_menu'"
+  >
+    <button mat-flat-button color="primary">Nuevo plato</button>
+    <button mat-stroked-button>Actualizar precios</button>
+  </app-page-header>
+
+  <div class="page-grid">
+    <mat-card>
+      <mat-card-title>Resumen</mat-card-title>
+      <mat-card-content>
+        <div class="summary-item">
+          <span>Ítems activos</span>
+          <strong>42</strong>
+        </div>
+        <div class="summary-item">
+          <span>Sin stock</span>
+          <strong>5</strong>
+        </div>
+        <div class="summary-item">
+          <span>Nuevos</span>
+          <strong>3</strong>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title>Categorías</mat-card-title>
+      <mat-card-content>
+        <mat-chip-set>
+          <mat-chip color="primary" selected>Platos fuertes</mat-chip>
+          <mat-chip>Entradas</mat-chip>
+          <mat-chip>Bebidas</mat-chip>
+        </mat-chip-set>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <mat-card>
+    <mat-card-title>Observaciones</mat-card-title>
+    <mat-card-content>
+      <p>Conecta la API para ver precio, categoría y disponibilidad en tiempo real.</p>
+    </mat-card-content>
+  </mat-card>
+</div>
