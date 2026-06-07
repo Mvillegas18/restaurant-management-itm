@@ -25,7 +25,7 @@ public class ReservationService : IReservationService
     {
         // Validación: fecha futura
         if (reservation.ReservationDate <= DateTime.UtcNow)
-            throw new InvalidOperationException("La fecha de reserva debe ser en el futuro.");
+            throw new InvalidOperationException("La fecha de reserva debe ser hoy o un día despúes a la fecha de hoy.");
 
         // Validación: tamaño del grupo
         if (reservation.PartySize <= 0)
