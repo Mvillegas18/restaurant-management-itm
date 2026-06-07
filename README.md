@@ -14,3 +14,5 @@ El sistema está desarrollado bajo una **arquitectura en 3 capas**, separando re
 El backend está construido con **.NET**, siguiendo buenas prácticas de desarrollo y principios de arquitectura limpia, mientras que el frontend se desarrolla con **Angular**, proporcionando una interfaz moderna, dinámica y fácil de usar.
 
 Este proyecto tiene como objetivo aplicar conocimientos de desarrollo **fullstack**, diseño de APIs REST y estructuración de aplicaciones escalables y mantenibles.
+
+Integrantes: Miguel Ángel Villegas Arango- Valeria Rodriguez Hibla
